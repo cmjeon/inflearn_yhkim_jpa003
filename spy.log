@@ -1,0 +1,14 @@
+1693743911471|0|statement|connection 1|url jdbc:h2:mem:4e2b0e68-e804-4a6b-88c0-01caba14b5bf|     drop table if exists member CASCADE |     drop table if exists member CASCADE 
+1693743911471|0|statement|connection 1|url jdbc:h2:mem:4e2b0e68-e804-4a6b-88c0-01caba14b5bf|     drop sequence if exists hibernate_sequence|     drop sequence if exists hibernate_sequence
+1693743911473|0|statement|connection 2|url jdbc:h2:mem:4e2b0e68-e804-4a6b-88c0-01caba14b5bf|create sequence hibernate_sequence start with 1 increment by 1|create sequence hibernate_sequence start with 1 increment by 1
+1693743911475|1|statement|connection 2|url jdbc:h2:mem:4e2b0e68-e804-4a6b-88c0-01caba14b5bf|     create table member (        id bigint not null,         user_name varchar(255),         primary key (id)     )|     create table member (        id bigint not null,         user_name varchar(255),         primary key (id)     )
+1693743911977|3|statement|connection 3|url jdbc:h2:mem:4e2b0e68-e804-4a6b-88c0-01caba14b5bf|call next value for hibernate_sequence|call next value for hibernate_sequence
+1693743912020|0|statement|connection 3|url jdbc:h2:mem:4e2b0e68-e804-4a6b-88c0-01caba14b5bf|insert into member (user_name, id) values (?, ?)|insert into member (user_name, id) values ('memberA', 1)
+1693743912021|0|commit|connection 3|url jdbc:h2:mem:4e2b0e68-e804-4a6b-88c0-01caba14b5bf||
+1693743993537|0|statement|connection 1|url jdbc:h2:mem:faa8988e-4a41-4c8e-9145-d8014a1a77d8|     drop table if exists member CASCADE |     drop table if exists member CASCADE 
+1693743993538|0|statement|connection 1|url jdbc:h2:mem:faa8988e-4a41-4c8e-9145-d8014a1a77d8|     drop sequence if exists hibernate_sequence|     drop sequence if exists hibernate_sequence
+1693743993539|0|statement|connection 2|url jdbc:h2:mem:faa8988e-4a41-4c8e-9145-d8014a1a77d8|create sequence hibernate_sequence start with 1 increment by 1|create sequence hibernate_sequence start with 1 increment by 1
+1693743993542|1|statement|connection 2|url jdbc:h2:mem:faa8988e-4a41-4c8e-9145-d8014a1a77d8|     create table member (        id bigint not null,         user_name varchar(255),         primary key (id)     )|     create table member (        id bigint not null,         user_name varchar(255),         primary key (id)     )
+1693743994109|4|statement|connection 3|url jdbc:h2:mem:faa8988e-4a41-4c8e-9145-d8014a1a77d8|call next value for hibernate_sequence|call next value for hibernate_sequence
+1693743994164|0|statement|connection 3|url jdbc:h2:mem:faa8988e-4a41-4c8e-9145-d8014a1a77d8|insert into member (user_name, id) values (?, ?)|insert into member (user_name, id) values ('memberA', 1)
+1693743994165|0|commit|connection 3|url jdbc:h2:mem:faa8988e-4a41-4c8e-9145-d8014a1a77d8||
