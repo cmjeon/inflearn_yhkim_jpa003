@@ -1,9 +1,9 @@
 spring:
   datasource:
-  url: jdbc:h2:tcp://localhost/~/Projects/h2/jpashop
-  username: sa
-  password:
-  driver-class-name: org.h2.Driver
+    url: jdbc:h2:tcp://localhost/~/Projects/h2/jpashop
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
   jpa:
     hibernate:
       ddl-auto: create
@@ -13,6 +13,8 @@ spring:
         format_sql: true # 쿼리문을 개행으로 이쁘게 출력하기
         highlight_sql: true # 쿼리명령어에 색을 부여
         use_sql_comment: true # SQL 내부에 주석을 추가?
+    open-in-view: false # Explicitly configure spring.jpa.open-in-view to disable this warning 끄기
+
 logging:
   level:
     org:
