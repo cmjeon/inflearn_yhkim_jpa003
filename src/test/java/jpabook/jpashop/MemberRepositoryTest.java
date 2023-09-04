@@ -1,10 +1,10 @@
 package jpabook.jpashop;
 
+import jpabook.jpashop.domain.Member;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Commit;
-import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -21,7 +21,7 @@ class MemberRepositoryTest {
     public void testMember() {
         // given
         Member member = new Member();
-        member.setUserName("memberA");
+        member.setName("memberA");
 
         // when
         Long savedId = memberRepository.save(member);
@@ -29,7 +29,7 @@ class MemberRepositoryTest {
 
         // then
         assertThat(findMember.getId()).isEqualTo(member.getId());
-        assertThat(findMember.getUserName()).isEqualTo(member.getUserName());
+        assertThat(findMember.getName()).isEqualTo(member.getName());
         assertThat(findMember).isEqualTo(member);
 
     }
