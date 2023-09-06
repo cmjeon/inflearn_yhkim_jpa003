@@ -50,8 +50,9 @@ class MemberServiceTest {
         // when
         memberService.join(member1);
 
-        // when, then
+        // then
         assertThrows(IllegalStateException.class, () -> {
+            // when
             memberService.join(member2);
         });
 
