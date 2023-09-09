@@ -14,6 +14,10 @@ spring:
         highlight_sql: true # 쿼리명령어에 색을 부여
         use_sql_comment: true # SQL 내부에 주석을 추가?
     open-in-view: false # Explicitly configure spring.jpa.open-in-view to disable this warning 끄기
+  thymeleaf:
+    # resources:templates/ + { ViewName } + .html
+    prefix: classpath:/templates/
+    suffix: .html
 
 logging:
   level:

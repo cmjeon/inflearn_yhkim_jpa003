@@ -18,6 +18,7 @@ public class MemberService {
     /**
      * 회원 가입
      */
+    @Transactional
     public Long join(Member member) {
         //중복 회원 검증
         validateDuplicateMember(member);
